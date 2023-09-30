@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sailboat</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="socket.io.min.js" type="text/javascript"></script>
+  <script defer src="main.js" type="text/javascript"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box item1">
+      <p style="margin-bottom: 0px;">Status</p>
+      <div style="display: flex;">
+        <div style="margin: auto;">
+          <span style="color:tomato;" id="rf">RF: No signal</span>
+        </div>
+        <div style="margin: auto;">
+          <span style="color:tomato;" id="lora">LoRa: No signal</span>
+        </div>
+        <div style="margin: auto;">
+          <span style="color:tomato;" id="ip">IP: N/A</span>
+        </div>
+        <!-- <div style="margin: auto;">
+          <span style="color:tomato;">GPS: N/A</span>
+        </div> -->
+        <div style="margin: auto;">
+          <span id="nav">Nav Mode: N/A</span>
+        </div>
+      </div>
+    </div>
+    <div class="box item2">
+      <p>Map</p>
+      <div id="map"></div>
+    </div>
+    <div class="box item3">
+      <p>Heading/Wind</p>
+      <div style="position: relative;">
+        <img src="img/heading.png" id="head">
+        <img src="img/wind.png" id="headwind">
+        <img src="img/nav.png" id="headbug">
+      </div>
+    </div>
+    <div class="box item4">
+      <p>Tilt</p>
+      <!--<span>Tilt</span>-->
+      <img src="img/tilt.png" id="tilt">
+    </div>
+    <div class="box item5">
+      <p>Controls</p>
+      <button id="rts">Return to Shore</button>
+      <button id="loi">Set Loiter Mode</button>
+      <hr>
+      <!-- <button>Load Waypoints</button> -->
+      <button id="send">Send Waypoints</button>
+      <button id="auto">Start Mission</button>
+      <hr>
+      <!-- <input type="text" placeholder="LAT">
+      <input type="text" placeholder="LON">
+      <button>Go To Coordinates</button>
+      <hr> -->
+      <!-- <select name="" id="">
+        <option value="">Select Waypoint</option>
+      </select>
+      <button>Go To Waypoint</button> -->
+    </div>
+    <div class="box item6">
+      <p>Waypoints</p>
+      <div style="text-align: left; font-size: small;">
+        <ul id="waypoints">
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

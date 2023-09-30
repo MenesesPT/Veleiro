@@ -1,0 +1,7 @@
+.dist/
+GUI/server/node_modules/
+.vscode/
+Sail/Logs/*
+Sail/individual/Logs/*
+*.o
+*.gch
